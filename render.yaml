@@ -1,0 +1,10 @@
+services:
+  - type: web
+    plan: free
+    name: WAIFU-HUSBANDO-CATCHER
+    env: python3
+    buildCommand: pip3 install -r requirements.txt
+    startCommand: python3 =m shivu  
+    repo: https://github.com/Kousei-Friend-A/WAIFU-HUSBANDO-CATCHER.git
+    branch: main
+    autoDeploy: false   
