@@ -56,7 +56,7 @@ async def message_counter(update: Update, context: CallbackContext) -> None:
             last_user[chat_id]['count'] += 1
             if last_user[chat_id]['count'] >= 100:
             
-                if user_id in warned_users and time.time() - warned_users[user_id] < 1000:
+                if user_id in warned_users and time.time() - warned_users[user_id] < 10:
                     return
                 else:
                     
