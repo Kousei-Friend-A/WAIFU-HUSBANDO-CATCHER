@@ -64,7 +64,8 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Install requirements
-RUN pip3 install -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 # Starting Worker
 CMD ["python3","-m", "shivu"]
