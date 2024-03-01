@@ -68,4 +68,6 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m", "shivu"]
+COPY . .
+
+CMD python3 -m shivu
